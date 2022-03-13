@@ -20,7 +20,7 @@ const twvoucher = require('@fortune-inc/tw-voucher');
 twvoucher('เบอร์โทรศัพท์', 'xxxxhFog10Ijbmg1c').then(redeemed => {
     console.log(`redeem ซอง ${redeemed.code} ของ ${redeemed.owner_full_name} จำนวน ${redeemed.amount} บาทแล้ว`) 
 }).catch(err => {
-    console.error('invaild voucher code')
+    console.error(err)
 })
 ```
 ตัวอย่างการเติมด้วย URL
@@ -30,6 +30,6 @@ const twvoucher = require('@fortune-inc/tw-voucher');
 twvoucher('เบอร์โทรศัพท์', 'https://gift.truemoney.com/campaign/?v=xxxxfhFog10Ijbmg1c').then(redeemed => {
     console.log(`redeem ซอง ${redeemed.code} ของ ${redeemed.owner_full_name} จำนวน ${redeemed.amount} บาทแล้ว`) 
 }).catch(err => {
-    console.error('invaild voucher code')
+    console.error(err)
 })
 ```
